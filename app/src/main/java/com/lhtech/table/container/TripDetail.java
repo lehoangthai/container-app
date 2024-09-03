@@ -110,7 +110,12 @@ public class TripDetail extends AppCompatActivity {
         Button signatureBtn = findViewById(R.id.signature);
 
 
+        signatureBtn.setOnClickListener(view -> {
+            Intent i = new Intent(TripDetail.this, SignatureView.class);
+            startActivity(i);
 
+
+        });
 
 
     }

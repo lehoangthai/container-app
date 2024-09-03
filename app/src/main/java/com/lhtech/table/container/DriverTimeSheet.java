@@ -1,7 +1,10 @@
 package com.lhtech.table.container;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +20,13 @@ public class DriverTimeSheet extends AppCompatActivity {
         // Optional: Thiết lập giá trị mặc định cho EditText
         editText.setText("02/09/2024");
         editText.setEnabled(false);
-
+        ImageButton backButton = findViewById(R.id.imageButton);
+        backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void  onClick(View view){
+                finish();
+            }
+        });
     }
+
 }

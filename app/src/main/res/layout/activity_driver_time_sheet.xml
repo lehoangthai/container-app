@@ -35,7 +35,8 @@
                     android:src="@drawable/arrow"
                     android:contentDescription="back"
                     android:padding="16dp"
-                    app:tint="@color/white" />
+                    app:tint="@color/white"
+                    />
 
 
                 <TextView

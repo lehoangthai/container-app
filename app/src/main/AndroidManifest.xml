@@ -13,14 +13,20 @@
         android:theme="@style/Theme.TableContainer"
         tools:targetApi="31">
         <activity
+            android:name=".Signature"
+            android:exported="false"
+            android:parentActivityName=".TripDetail"/>
+        <activity
             android:name=".TripDetail"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Epod" />
         <activity
             android:name=".Epod"
             android:exported="false" />
         <activity
             android:name=".DriverTimeSheet"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Epod" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

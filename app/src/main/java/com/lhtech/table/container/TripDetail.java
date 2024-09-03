@@ -3,9 +3,9 @@ package com.lhtech.table.container;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TableLayout;
@@ -98,11 +98,20 @@ public class TripDetail extends AppCompatActivity {
             tableLayout.addView(divider);
             index ++;
         }
-        ImageButton back = findViewById(R.id.imageButton);
-        back.setOnClickListener(view -> {
-            Intent i = new Intent(TripDetail.this, Epod.class);
-            startActivity(i);
-            finish();
+
+       ImageButton backButton = findViewById(R.id.imageButton);
+        backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void  onClick(View view){
+                finish();
+            }
         });
+
+        Button signatureBtn = findViewById(R.id.signature);
+
+
+
+
+
     }
 }

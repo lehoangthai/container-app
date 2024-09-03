@@ -2,6 +2,8 @@ package com.lhtech.table.container;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +22,11 @@ public class Epod extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_epod);
         TableLayout tableLayout = findViewById(R.id.tableLayout);
-
+//        tableLayout.setBackground(new BitmapDrawable(getResources(), String.valueOf(R.drawable.background_epod)));
+        Drawable background = tableLayout.getBackground();
+        if (background != null) {
+            background.setAlpha(60);
+        }
         // Dữ liệu mẫu
         String[][] data = {
 
@@ -103,11 +109,12 @@ public class Epod extends AppCompatActivity {
             tableRow.setGravity(Gravity.CENTER);
 
 
+
             tableRow.setOnClickListener(view ->{
                 Intent i = new Intent(Epod.this, TripDetail.class);
                 startActivity(i);
-                finish();
             });
+
 
             tableLayout.addView(tableRow);
             tableLayout.addView(divider);
@@ -117,7 +124,7 @@ public class Epod extends AppCompatActivity {
         menu.setOnClickListener(view -> {
             Intent i = new Intent(Epod.this, DriverTimeSheet.class);
             startActivity(i);
-            finish();
+
         });
 
     }
